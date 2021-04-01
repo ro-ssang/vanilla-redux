@@ -4,7 +4,7 @@ const ADD = "ADD";
 const DELETE = "DELETE";
 
 const addToDo = (text) => ({ type: ADD, text });
-const deleteToDo = (id) => ({ type: DELETE, id });
+const deleteToDo = (id) => ({ type: DELETE, id: parseInt(id) });
 
 const reducer = (state = [], action) => {
   switch (action.type) {
